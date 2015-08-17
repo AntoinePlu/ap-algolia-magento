@@ -20,12 +20,19 @@ body {
 	display: flex;
 	flex: 1 1 100%;
 	justify-content: space-between;
+	position: relative;
 }
 
-.header-search-top h1 {
-	background: url('../images/magento-logo.svg') no-repeat;
+.header-search-logo {
 	height: 35px;
 	width: 166px;
+	display: block;
+}
+
+.header-search-logo-small {
+	opacity: 0;
+	position: absolute;
+	top: -200px;
 }
 
 .header-search-top h1 span {
@@ -110,7 +117,7 @@ input[type="search"]::-webkit-input-placeholder {
 .container {
 	display: flex;
 	width: 1280px;
-	margin: 0 auto;
+	margin: 278px auto 0;
 }
 
 aside {
@@ -358,3 +365,120 @@ article img {
 
 
 
+/********* HEADER ANIMATION ********/
+
+.head-anim {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10000;
+	height: 278px;
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+}
+
+.head-anim .head-anim-inner {
+	width: 100%;
+	max-width: 1280px;
+}
+
+
+/* Transitions and class for reduced height */
+.head-anim h1,
+.head-anim nav a {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.head-anim.head-anim-shrink .header-search-logo-small {
+	opacity: 1;
+	position: absolute;
+	top: 6px;
+}
+
+.head-anim.head-anim-shrink .header-search-logo {
+	opacity: 0;
+	position: absolute;
+	top: -40px;
+}
+
+.head-anim.head-anim-shrink .head-anim-inner {
+	display: flex;
+	transition: all 0.3s;
+}
+
+.head-anim.head-anim-shrink {
+	height: 61px;
+}
+.head-anim.head-anim-shrink .header-search-top {
+	display: flex;
+	flex: 1 1 200px;
+	transition: all 0.3s;
+}
+
+/*.head-anim.head-anim-shrink .header-search-top a {
+	position: absolute;
+	right: 7%;
+	top: 14px;
+	transition: all 0.3s;
+}*/
+
+.head-anim.head-anim-shrink .search-input {
+	flex: 10 1 200px;
+	display: flex;
+	transition: all 0.3s;
+}
+
+.head-anim.head-anim-shrink h2,
+.head-anim.head-anim-shrink .search-input p,
+.head-anim.head-anim-shrink .header-search-top a  {
+	position: absolute;
+	opacity: 0;
+	top: 9999px;
+	transition: all 0.3s;
+}
+
+.head-anim.head-anim-shrink h1 {
+	margin: 13px 40px 0 0;
+	font-size: 10px;
+	height: 35px;
+	transition: all 0.3s;
+}
+
+
+.head-anim.head-anim-shrink input[type="search"] {
+	height: 41px;
+	margin: 2px 0 0 0;
+	transition: all 0.3s;
+}
+.head-anim.head-anim-shrink input[type="search"]::-webkit-search-decoration {
+	top: 9px;
+	transition: all 0.3s;
+}
+
+.head-anim.head-anim-shrink input[type="search"]::-webkit-input-placeholder {
+	line-height: 28px;
+	transition: all 0.3s;
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 55em) {
+
+	.head-anim .head-anim-inner {
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 32.25em) {
+	.head-anim nav a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 24em) {
+
+}
