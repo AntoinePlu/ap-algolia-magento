@@ -27,6 +27,7 @@ var search = instantsearch({
       '</a>' +
     '</article>';
 
+
     // Search
     search.addWidget(
       instantsearch.widgets.searchBox({
@@ -116,11 +117,12 @@ var search = instantsearch({
       );
     */
 
+    // Stats
     search.addWidget(
       instantsearch.widgets.stats({
         container: '#stats-container',
         templates: {
-          body: '<div>{{nbHits}} Extensions found in {{processingTimeMS}}ms, by <a href="http://www.algolia.com">Algolia</a></div>'
+          body: '<p>{{nbHits}} Extensions found in {{processingTimeMS}}ms, by <a href="http://www.algolia.com">Algolia</a></p>'
         }
       })
     );
