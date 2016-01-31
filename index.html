@@ -2,38 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Magento Connecto propulsed by Algolia</title>
-	<meta name="description" content="Magento Connect propulsed by Algolia, a unique search experience to find extensions" />
-	<meta name="keywords" content="magento, magento connect, algolia, search, experience, extensions" />
-	<meta name="author" content="AntoinePlu" />
-	<link rel="stylesheet" href="styles/normalize.css" type="text/css"/>
-	<link rel="stylesheet" href="styles/fonts.css" type="text/css"/>
-	<link rel="stylesheet" href="styles/main.css" type="text/css"/>
-	<script src="js/modernizr.custom.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magento Connect powered by Algolia</title>
+  <meta name="description" content="Magento Connect powered by Algolia" />
+  <meta name="keywords" content="Magento, Magento Connect, Algolia" />
+  <meta name="author" content="Antoine Plu" />
+  <link rel="stylesheet" href="styles/normalize.css" type="text/css"/>
+  <link rel="stylesheet" href="styles/fonts.css" type="text/css"/>
+  <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1.1.3/instantsearch.min.css" />
+  <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 	<header class="header head-anim">
-		<div class="header-search head-anim-inner">
-			<div class="header-search-top">
-				<h1>
-					<span>Magento Connect Logo</span>
-					<img src="images/magento-logo.svg" class="header-search-logo" />
-					<img src="images/al-mg.svg" class="header-search-logo-small" />
-				</h1>
-				<a href="https://www.algolia.com/with/magento">Read more about Algolia + Magento</a>
-			</div>
-			<h2>A Unique Search Experience</h2>
-			<div class="search-input">
-				<input type="search" placeholder="Search extensions by name or description..."></input>
-				<p>Powered by <span>Algolia</span></p>
-			</div>
-		</div>
-	</header>
+    <div class="header-search head-anim-inner">
+      <div class="header-search-top">
+        <h1>
+          <span>Magento Connect Logo</span>
+          <img src="images/magento-logo.svg" class="header-search-logo" />
+          <img src="images/al-mg.svg" class="header-search-logo-small" />
+        </h1>
+        <a href="https://www.algolia.com/with/magento">Read more about Algolia + Magento</a>
+      </div>
+      <h2>A Unique Search Experience</h2>
+      <div class="search-input">
+        <input type="text" id="search-box"/>
+          <p>Powered by <span>Algolia</span></p>
+      </div>
+    </div>
+  </header>
 	<div class="container">
 		<aside>
-			<div class="filter-price">
+			<div class="filter-price" id="price-ranges">
 				<h3>Price</h3>
 				<ul class="filter-price-list">
 					<li class="price-list-category">
@@ -66,7 +67,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="filter-rating">
+			<div class="filter-rating"><!--id="stars"-->
 				<h3>Rating</h3>
 				<ul class="filter-rating-list">
 					<li class="rating-list-category">
@@ -124,300 +125,148 @@
 		</aside>
 		<div class="content">
 			<header>
-				<p>8,695 Extensions found in 1ms, by <a href="http://algolia.com">Algolia</a></p>
-				<div class="content-sorting">
-					<p>Sorting by:</p>
-					<a href="#">Rating</a>
-				</div>
-			</header>
-			<section>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://f.cl.ly/items/0H3Z3S2X3r0025363h3s/salestax-img.png" />
-						<div class="article-description">
-							<h3>Sales Tax Extension for Avalara's AvaTax</h3>
-							<p>The AvaTax™ sales tax decision engine delivers 100,00+ taxability rules across 11,000+ juridictions.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">2,654</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/a/u/automatic-related-products---2_1.png" />
-						<div class="article-description">
-							<h3>Automatic Related Products by aheadWorks</h3>
-							<p>Cross-selling and cross-promoting has never been so easy than with Automatic Related Products 2.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">1,829</div>
-						<div class="content-price">$139.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/l/o/logoformagento_1.png" />
-						<div class="article-description">
-							<h3>Email Marketing Automation - dotmailer</h3>
-							<p>Best of breed email and multi-channel marketing automation with dotmailer's market leading software</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">4.7</div>
-						<div class="content-popularity">1,108</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/p/a/paypal-bml-magento-connect-icon_1_1.jpg" />
-						<div class="article-description">
-							<h3>PayPal Bill Me Later Promotional Banners</h3>
-							<p>Easily add PayPal Bill Me Later banners to your home page, category pages, product pages, and shopping cart.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">3.7</div>
-						<div class="content-popularity">347</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/l/a/large_gear_no_tag_1.png" />
-						<div class="article-description">
-							<h3>Magento EDI by Logicbroker</h3>
-							<p>Leverage Magento to achieve EDI compliance with big box retailers and trading partners.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">2.5</div>
-						<div class="content-popularity">75</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/s/a/sagepaysuiteprologo_2_1.jpg" />
-						<div class="article-description">
-							<h3>ebizmarts - Sage Pay Suite Pro Europe (SagePay OFFICI...</h3>
-							<p>SagePay OFFICIAL Extension. Full integration of Protocol v3: Direct/Server inFrame/Form/Token & PayPal Express</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">2,654</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/s/s/ssu_2__1.png" />
-						<div class="article-description">
-							<h3>Search: Sphinx Search Ultimate</h3>
-							<p>Search Ultimate unites such products as search Spell-Correction, Search AutoComplete and Sphinx Search Pro</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">6,825</div>
-						<div class="content-price">$149.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://f.cl.ly/items/0H3Z3S2X3r0025363h3s/salestax-img.png" />
-						<div class="article-description">
-							<h3>Sales Tax Extension for Avalara's AvaTax</h3>
-							<p>The AvaTax™ sales tax decision engine delivers 100,00+ taxability rules across 11,000+ juridictions.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">6,825</div>
-						<div class="content-price">$149.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/e/x/export450_1.png" />
-						<div class="article-description">
-							<h3>Magento Order Export Module</h3>
-							<p>Connect your Magento store to almost any ERP, CRM, warehouse, dropshipping or shipping system with XTENTO.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">6,683</div>
-						<div class="content-price">$199.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/e/x/extension_icon_import_export_products_1.jpg" />
-						<div class="article-description">
-							<h3>Custom Bulk Product Import + Export with Tier Pricing...</h3>
-							<p>Extension supports custom options, configurable, downloadable, grouped, simple products tier pricing and more</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">4.9</div>
-						<div class="content-popularity">12,482</div>
-						<div class="content-price">$99.99</div>
-					</div>
-				</article>
-			</section>
-			<section>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://f.cl.ly/items/0H3Z3S2X3r0025363h3s/salestax-img.png" />
-						<div class="article-description">
-							<h3>Sales Tax Extension for Avalara's AvaTax</h3>
-							<p>The AvaTax™ sales tax decision engine delivers 100,00+ taxability rules across 11,000+ juridictions.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">2,654</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/a/u/automatic-related-products---2_1.png" />
-						<div class="article-description">
-							<h3>Automatic Related Products by aheadWorks</h3>
-							<p>Cross-selling and cross-promoting has never been so easy than with Automatic Related Products 2.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">1,829</div>
-						<div class="content-price">$139.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/l/o/logoformagento_1.png" />
-						<div class="article-description">
-							<h3>Email Marketing Automation - dotmailer</h3>
-							<p>Best of breed email and multi-channel marketing automation with dotmailer's market leading software</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">4.7</div>
-						<div class="content-popularity">1,108</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/p/a/paypal-bml-magento-connect-icon_1_1.jpg" />
-						<div class="article-description">
-							<h3>PayPal Bill Me Later Promotional Banners</h3>
-							<p>Easily add PayPal Bill Me Later banners to your home page, category pages, product pages, and shopping cart.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">3.7</div>
-						<div class="content-popularity">347</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/125x/9df78eab33525d08d6e5fb8d27136e95/l/a/large_gear_no_tag_1.png" />
-						<div class="article-description">
-							<h3>Magento EDI by Logicbroker</h3>
-							<p>Leverage Magento to achieve EDI compliance with big box retailers and trading partners.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">2.5</div>
-						<div class="content-popularity">75</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/s/a/sagepaysuiteprologo_2_1.jpg" />
-						<div class="article-description">
-							<h3>ebizmarts - Sage Pay Suite Pro Europe (SagePay OFFICI...</h3>
-							<p>SagePay OFFICIAL Extension. Full integration of Protocol v3: Direct/Server inFrame/Form/Token & PayPal Express</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">2,654</div>
-						<div class="content-price">Free</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/s/s/ssu_2__1.png" />
-						<div class="article-description">
-							<h3>Search: Sphinx Search Ultimate</h3>
-							<p>Search Ultimate unites such products as search Spell-Correction, Search AutoComplete and Sphinx Search Pro</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">6,825</div>
-						<div class="content-price">$149.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://f.cl.ly/items/0H3Z3S2X3r0025363h3s/salestax-img.png" />
-						<div class="article-description">
-							<h3>Sales Tax Extension for Avalara's AvaTax</h3>
-							<p>The AvaTax™ sales tax decision engine delivers 100,00+ taxability rules across 11,000+ juridictions.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">6,825</div>
-						<div class="content-price">$149.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/e/x/export450_1.png" />
-						<div class="article-description">
-							<h3>Magento Order Export Module</h3>
-							<p>Connect your Magento store to almost any ERP, CRM, warehouse, dropshipping or shipping system with XTENTO.</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">5.0</div>
-						<div class="content-popularity">6,683</div>
-						<div class="content-price">$199.00</div>
-					</div>
-				</article>
-				<article class="content-article">
-					<div class="article-infos">
-						<img src="http://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/small_image/222x/9df78eab33525d08d6e5fb8d27136e95/e/x/extension_icon_import_export_products_1.jpg" />
-						<div class="article-description">
-							<h3>Custom Bulk Product Import + Export with Tier Pricing...</h3>
-							<p>Extension supports custom options, configurable, downloadable, grouped, simple products tier pricing and more</p>
-						</div>
-					</div>
-					<div class="article-details">
-						<div class="content-rating">4.9</div>
-						<div class="content-popularity">12,482</div>
-						<div class="content-price">$99.99</div>
-					</div>
-				</article>
-			</section>
+        <div id="stats-container"></div>
+          <!-- No present in index? <div id="sort-by-container"></div>-->
+          <div id="pagination-container"></div>
+      </header>
+			<section id="hits-container"></section>
+      <div id="pagination-container"></div>
 		</div>
 	</div>
-	<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+
 	<script src="js/classie.js"></script>
 	<script src="js/cbpAnimatedHeader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/instantsearch.js/1.1.3/instantsearch.min.js"></script>
+  <!--<script src="humanize.js"></script>-->
+  <script>
+    var search = instantsearch({
+      appId: 'latency',
+      apiKey: 'db2af085e1f7dc80f93178182b76ddca',
+      indexName: 'magento-connect'
+    });
+
+    //var humanize = require('humanize');
+
+    var noResultsTemplate =
+    '<div class="text-center">No results found matching <strong>{{query}}</strong></div>';
+
+    var hitTemplate =
+    '<article class="content-article">' +
+      '<a href="{{link}}">' +
+        '<div class="article-infos">' +
+          '<image src="{{thumbnail_url}}">' +
+          '<div class="article-description">' +
+            '<h3 class="media-heading">{{{_highlightResult.title.value}}}</h3>' +
+            '<p class="media-desc">{{{_highlightResult.short_description.value}}}</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="article-details">' +
+          '<div class="content-rating">{{score}}</div>' +
+          '<div class="content-popularity">{{popularity}}</div>' +
+          '<div class="content-price">{{price}}</div>' +
+        '</div>' +
+      '</a>' +
+    '</article>';
+
+    // Search
+    search.addWidget(
+      instantsearch.widgets.searchBox({
+        container: '#search-box',
+        placeholder: 'Search extensions by name or description...',
+        autofocus: true,
+        poweredBy: false,
+      })
+    );
+
+    // Results
+    search.addWidget(
+      instantsearch.widgets.hits({
+        container: '#hits-container',
+        templates: {
+          empty: noResultsTemplate,
+          item: hitTemplate
+        },
+        hitsPerPage: 20,
+        transformData: function(hit) {
+          hit.score = Math.round(hit.score*10)/10;
+          //hit.score = humanize(hit.score);
+          if (hit.price === 0){
+            hit.price = "FREE";
+          }
+          else {
+            hit.price = "$" + hit.price;
+          }
+          return hit;
+        }
+      })
+    );
+
+    // Pagination
+    search.addWidget(
+      instantsearch.widgets.pagination({
+        container: '#pagination-container',
+        maxPages: 40,
+        // default is to scroll to 'body', here we disable this behavior
+        scrollTo: false
+      })
+    );
+
+    /*
+    // Facets for Price
+    search.addWidget(
+      instantsearch.widgets.priceRanges({
+        container: '#price-ranges',
+        attributeName: 'price',
+        labels: {
+          currency: '$',
+          separator: 'to',
+          button: 'Go'
+        },
+        templates: {
+          header: 'Price',
+        }
+      })
+    );
+    */
+
+    /*
+    // Facets for Rating
+    search.addWidget(
+      instantsearch.widgets.starRating({
+        container: '#stars',
+        attributeName: 'rating',
+        max: 5,
+        labels: {
+          andUp: ''
+        }
+      })
+    );
+    */
+
+    /*
+    // Sort by Selector
+    search.addWidget(
+      instantsearch.widgets.sortBySelector({
+        container: '#sort-by-container',
+        indices: [
+          {name: 'instant_search', label: 'Most relevant'},
+          {name: 'instant_search_price_asc', label: 'Lowest price'},
+          {name: 'instant_search_price_desc', label: 'Highest price'}
+          ]
+        })
+      );
+    */
+
+    search.addWidget(
+      instantsearch.widgets.stats({
+        container: '#stats-container',
+        templates: {
+          body: '<div>{{nbHits}} Extensions found in {{processingTimeMS}}ms, by <a href="http://www.algolia.com">Algolia</a></div>'
+        }
+      })
+    );
+
+    search.start();
+    </script>
 </body>
 </html>
