@@ -298,6 +298,13 @@ article img {
 	max-width: 500px;
 }
 
+.article-description em {
+    color: #333;
+    font-style: normal;
+    background-color: #FFFFD4;
+    border-radius: 4px;
+}
+
 .article-description h3 {
 	margin: 0;
 	font-weight: 400;
@@ -329,7 +336,7 @@ article img {
 }
 
 .content-rating:before {
-	content: url('../images/star-full-icon.svg') no-repeat;
+	content: url('../images/star-full-icon.svg');
 	position:relative;
 	height: 16px;
 	margin-right: 5px;
@@ -345,7 +352,7 @@ article img {
 }
 
 .content-popularity:before {
-	content: url('../images/popularity-icon.svg') no-repeat;
+	content: url('../images/popularity-icon.svg');
 	position:relative;
 	height: 16px;
 	margin-right: 5px;
